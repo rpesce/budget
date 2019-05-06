@@ -205,7 +205,7 @@ var UIController = (function() {
 
 
 
-// GLOBAL CONTROLLER
+// GLOBAL APP CONTROLLER
 var controller = (function(budgetCtrl, UICtrl) {
 
 	var ctrlAddItem, DOM, setupEventListeners;
@@ -232,7 +232,17 @@ var controller = (function(budgetCtrl, UICtrl) {
 		UICtrl.displayBudget(budget);
 
 	};
-	
+
+	var updatePercentages = function() {
+
+		//1. Calculate percentages
+
+		//2. Read from budget controller
+
+		//3. Update UI
+
+	};
+
 
 	ctrlAddItem = function(){
 		var input, newItem;
@@ -252,6 +262,10 @@ var controller = (function(budgetCtrl, UICtrl) {
 
 			//5. Calculate and update budget
 			updateBudget();
+
+			//6. Update percentages
+			updatePercentages();
+
 		}
 
 	};
@@ -275,6 +289,10 @@ var controller = (function(budgetCtrl, UICtrl) {
 
 			//3. Update and show the new budget
 			updateBudget();
+
+			//4. Update percentages
+			updatePercentages();
+
 		}
 
 	};
